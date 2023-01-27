@@ -20,14 +20,18 @@ def attack(char_name: str,
 
 def defence(char_name: str,
             char_class: str) -> str:
-    """Приминение блока."""
+    """
+    Принимает на вход имя и класс персонажа.
+    Возвращает строку сообщения о блокированном персонажем уроне
+    в зависимости от его класса.
+    """
     if char_class == 'warrior':
         return (f'{char_name} блокировал {10 + randint(5, 10)} урона')
     if char_class == 'mage':
         return (f'{char_name} блокировал {10 + randint(-2, 2)} урона')
     if char_class == 'healer':
         return (f'{char_name} блокировал {10 + randint(2, 5)} урона')
-    return (f'{char_name} не блокировал')
+    return (f'{char_name} блокировал 10 урона')
 
 
 def special(char_name: str,
